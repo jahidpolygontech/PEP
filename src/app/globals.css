@@ -13,6 +13,7 @@
 @theme inline {
   --color-primary: #204198;
   --color-secondary: #f0f3fd;
+  --color-tertiary:#00273D;
   --color-foreground: var(--foreground);
   --font-sans: var(--font-poppins);
   --font-mono: var(--font-geist-mono);
