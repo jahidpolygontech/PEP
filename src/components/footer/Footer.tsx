@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { FooterColumn } from "./FooterColumn";
 
 const socialLinks = [
   { href: "#", src: "/Images/footer/facebook.png", alt: "Facebook" },
@@ -9,29 +10,10 @@ const socialLinks = [
   { href: "#", src: "/Images/footer/linkedin.png", alt: "YouTube" },
 ];
 
-const serviceLinks = [
-  "Point to Point Taxi Trucks",
-  "Corporate Courier",
-  "Regional Freight",
-  "Air Freight",
-  "EMI Franchise",
-  "Express Delivery",
-  "Parcel Distribution",
-  "Point to Point Couriers",
-  "Regional Freight",
-  "Warehousing & Distribution (3PL)",
-];
+const serviceLinks = [ "Point to Point Taxi Trucks", "Corporate Courier", "Regional Freight", "Air Freight", "EMI Franchise", "Express Delivery", "Parcel Distribution", "Point to Point Couriers", "Regional Freight","Warehousing & Distribution (3PL)"];
 
-const quickLinks = [
-  "PEP2Click",
-  "Partner Us",
-  "Get Receivery",
-  "Contact PEP",
-  "Branches",
-  "Pay Invoice",
-  "Get Prepaid Coupons",
-  "Get Trackers",
-  "Open an account with PEP",
+const quickLinks = [ "PEP2Click",
+    "Partner Us","Get Receivery","Contact PEP","Branches","Pay Invoice","Get Prepaid Coupons","Get Trackers","Open an account with PEP",
 ];
 
 const companyLinks = ["About", "Careers"];
@@ -132,7 +114,7 @@ const Footer: React.FC = () => {
               height={16}
               className="sm:w-5 sm:h-5"
             />
-            <span className="text-xs sm:text-sm font-medium flex-1 text-left whitespace-nowrap overflow-hidden">
+            <span className="text-xs sm:text-sm font-medium flex-1 text-left whitespace-nowrap overflow-hidden cursor-pointer">
               Need Help? Chat with Us
             </span>
           </button>
@@ -156,23 +138,6 @@ const Footer: React.FC = () => {
   );
 };
 
-// Subcomponent for Footer Columns
-const FooterColumn: React.FC<{ title: string; links: string[] }> = ({
-  title,
-  links,
-}) => (
-  <div className="md:max-w-xs">
-    <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6">{title}</h3>
-    <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
-      {links.map((text, index) => (
-        <li key={index}>
-          <Link href="#" className="hover:text-white transition-colors">
-            {text}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  </div>
-);
-
 export default Footer;
+
+

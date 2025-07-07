@@ -1,4 +1,4 @@
-import { Button } from "@/components/button/PrimaryButton"
+import PrimaryBtn from "@/components/button/PrimaryButton"
 import Image from "next/image"
 
 export function HelpSection() {
@@ -14,9 +14,9 @@ export function HelpSection() {
             Our customer support team is here to help you with account setup, service inquiries, login issues, or any
             other questions you might have.
           </p>
-          <Button variant="outline" size="sm">
+          <PrimaryBtn variant="outline" size="sm">
             Customer Support
-          </Button>
+          </PrimaryBtn>
         </div>
       </div>
     </div>

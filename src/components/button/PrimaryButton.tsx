@@ -5,7 +5,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: "sm" | "md" | "lg"
 }
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+const PrimaryBtn = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ variant = "primary", size = "md", className = "", children, ...props }, ref) => {
     const baseClasses = "font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors"
 
@@ -33,6 +33,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   },
 )
 
-Button.displayName = "Button"
+PrimaryBtn.displayName = "Button";
 
-export { Button }
+export default PrimaryBtn;

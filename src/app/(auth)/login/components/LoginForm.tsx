@@ -6,13 +6,14 @@ import Link from "next/link"
 import type React from "react"
 import { useState } from "react"
 import { HelpSection } from "./HelpSection"
-import { Button } from "@/components/button/PrimaryButton"
+import PrimaryBtn from "@/components/button/PrimaryButton"
+
 
 
 
 export function LoginForm() {
   const [formData, setFormData] = useState({
-    username: "",
+    username: "", 
     password: "",
     keepLoggedIn: false,
   })
@@ -70,18 +71,17 @@ export function LoginForm() {
           </Link>
         </div>
 
-        <Button type="submit" className="w-full bg-primary" size="lg">
+        <PrimaryBtn type="submit" className="w-full bg-primary" size="lg">
           Login
-        </Button>
+        </PrimaryBtn>
 
         <div className="text-center">
-          <span className="text-sm text-gray-600">Dont have account? </span>
+          <span className="text-sm text-gray-600">Don&apos;t have account? </span>
           <Link href="/" className="text-primary hover:underline">
             Create Account
           </Link>
         </div>
       </form>
-
       <HelpSection />
     </div>
   )
