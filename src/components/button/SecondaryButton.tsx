@@ -18,7 +18,7 @@ const SecondaryBtn: React.FC<SecondaryBtnProps> = ({
   return (
     <button
       onClick={onClick}
-      className={`flex items-center gap-1 px-4 py-2 text-primary font-medium bg-white rounded hover:bg-gray-100 border text-sm ${borderColor}`}
+      className={`flex items-center gap-1 px-18 py-2 text-primary font-medium bg-white rounded hover:bg-gray-100 border text-base ${borderColor}`}
     >
       <Image src={iconSrc} alt={alt} width={20} height={20} />
       {label}
