@@ -21,15 +21,14 @@ const TrackingDetailsCard = () => (
     <div className="bg-white p-2 rounded-md border border-gray-300 w-full text-black">
       <div className="flex flex-col items-start gap-2">
         <h1>Tracking Code:123456</h1>
-
         <p className="text-gray-400">
           Enter the tracking number for real-time updates on it’s status and
           delivery date..{" "}
-          <span className="text-primary font-semibold">see more</span>{" "}
+          <span className="text-primary font-semibold">see more</span>
         </p>
       </div>
     </div>
-
+ 
     <Image
       src="/Images/tracking/Frame.svg"
       alt="Map"
