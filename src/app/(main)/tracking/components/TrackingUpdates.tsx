@@ -70,7 +70,7 @@ export default function Timeline() {
       <div className="bg-gray-50 min-h-screen p-8 rounded">
         <div className="max-w-2xl mx-auto">
           <div className="relative">
-            <div className="absolute left-[103px] top-1 bottom-10 w-0.5 bg-primary"></div>
+            <div className="absolute left-26 top-1 bottom-10 w-0.5 bg-primary"></div>
 
             {timelineItems.map((item, index) => (
               <div
@@ -108,11 +108,7 @@ export default function Timeline() {
                 <div className="flex-1 pt-0.5">
                   {item.title && (
                     <h3
-                      className={`font-semibold mb-1 text-2xl ${
-                        item.title === "Successfully Delivered"
-                          ? "text-green-600"
-                          : "text-gray-800"
-                      }`}
+                      className={`font-semibold mb-1 text-2xl ${ item.title === "Successfully Delivered" ? "text-green-600": "text-gray-800"}`}
                     >
                       {item.title}
                     </h3>
