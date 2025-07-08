@@ -10,6 +10,14 @@
   background-color: #25459B;
 }
 
+.bg-secondary{
+  background-color: #F0F3FC;
+}
+
+.bg-tertiary{
+  background-color: #F8F8F8;
+}
+
 @theme inline {
   --color-primary: #204198;
   --color-secondary: #f0f3fd;
