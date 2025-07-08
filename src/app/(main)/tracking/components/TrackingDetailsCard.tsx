@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { Search } from "lucide-react";
 import Image from "next/image";
 
@@ -94,6 +96,38 @@ const TrackingDetailsCard = () => (
           <p className="text-gray-600">Street, Sydney, NSW</p>
           <p className="text-gray-600">2000, Australia</p>
           <p className="text-gray-600">Phone: 0412 345 678</p>
+        </div>
+      </div>
+    </div>
+
+    {/* rate this rider */}
+
+    <div className="bg-white p-4 ">
+      <div className="flex flex-row gap-52">
+        <div className="flex flex-col space-y-3">
+          <div className="flex flex-col space-y-6">
+            <div className="flex gap-3">
+              <Image
+                src="/Images/tracking/car.svg"
+                alt="cart"
+                height={20}
+                width={20}
+              />
+              <p className="text-black">Assigned To</p>
+            </div>
+          </div>
+          <p className="text-gray-600">Name: Jack Qiunn</p>
+          <p className="text-gray-600">Phone: 0412 345 678</p>
+        </div>
+
+        <div className="flex flex-col space-y-3 mt-8">
+          <div className="flex items-center gap-x-2 text-yellow-400">
+            {[...Array(5)].map((_, i) => (
+              <FontAwesomeIcon key={i} icon={faStar} className="w-4 h-4" />
+            ))}
+            <span className="text-black">5.0</span>
+          </div>
+          <p className="text-primary font-semibold">Rate This Rider</p>
         </div>
       </div>
     </div>
