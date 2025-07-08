@@ -1,64 +1,178 @@
-import PrimaryBtn from "@/components/button/PrimaryButton";
-import Image from "next/image";
+"use client";
 
-const travelData = [
+import { useState } from "react";
+import * as Select from "@radix-ui/react-select";
+import Image from "next/image";
+import PrimaryBtn from "@/components/button/PrimaryButton";
+
+interface TravelHistoryItem {
+  date: string;
+  time: string;
+  activity: string;
+  place: string;
+}
+
+const travelData: TravelHistoryItem[] = [
   {
-    date: "Monday, Arkansas",
-    time: "09:25 AM",
-    activity: "Package Delivered",
-    place: "Arkansas, USA",
+    date: "Sunday, 01/09/2024",
+    time: "3:55 AM",
+    activity: "Shipment information sent to Centurion",
+    place: "",
   },
   {
-    date: "Monday, Arkansas",
-    time: "08:13 AM",
-    activity: "Dispatched from NG",
-    place: "Lagos, NG",
+    date: "Monday, 01/10/2024",
+    time: "4:55 AM",
+    activity: "On Centurion Vehicle for delivery",
+    place: "XYZ Place",
   },
   {
-    date: "Sunday, Lagos",
-    time: "07:12 AM",
-    activity: "Shipped",
-    place: "Lagos, NG",
+    date: "",
+    time: "5:55 AM",
+    activity: "Delivered",
+    place: "ABC Place",
+  },
+  {
+    date: "Tuesday, 01/11/2024",
+    time: "6:55 AM",
+    activity: "Delivered",
+    place: "MNO Place",
+  },
+  {
+    date: "Wednesday, 01/12/2024",
+    time: "7:55 AM",
+    activity: "Delivery Expectation",
+    place: "QRST Place",
+  },
+  {
+    date: "Monday, 01/01/2025",
+    time: "3:55 AM",
+    activity: "On Centurion vehicle for delivery",
+    place: "Place Name",
   },
 ];
 
-const TravelHistoryTable = () => (
-  <div className="bg-white p-6 shadow rounded-lg">
-    <div className="flex justify-between items-center mb-4">
-      <h4 className="text-lg font-semibold text-gray-800">Travel History</h4>
-      {/* <button className="btn btn-outline">Download PDF</button> */}
-      <PrimaryBtn variant="outline" size="lg">
-        <span className="flex items-center justify-center gap-x-2">
-          <Image
-            src="/Images/tracking/document-download.svg"
-            alt="Download"
-            height={16}
-            width={16}
-          />
-          Download PDF
-        </span>
-      </PrimaryBtn>
-    </div>
-    <table className="w-full table-auto text-sm text-left">
-      <thead>
-        <tr className="text-gray-500 border-b">
-          <th className="py-2">Date</th>
-          <th className="py-2">Time</th>
-          <th className="py-2">Activity</th>
-          <th className="py-2">Place</th>
-        </tr>
-      </thead>
-      <tbody>
-        {travelData.map((row, idx) => (
-          <tr key={idx} className="border-b text-gray-700">
-            <td className="py-2">{row.date}</td>
-            <td className="py-2">{row.time}</td>
-            <td className="py-2">{row.activity}</td>
-            <td className="py-2">{row.place}</td>
-          </tr>
+// Fallback Unicode icons
+const CheckIcon = () => <span className="text-green-600">✓</span>;
+const ChevronDownIcon = () => <span>▼</span>;
+const ChevronUpIcon = () => <span>▲</span>;
+
+export default function TravelHistory() {
+  const [timeZone, setTimeZone] = useState("Local Scan Time");
+
+  return (
+    <div className="mx-auto p-6 bg-gray-50">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-6">
+        <h1 className="text-2xl font-semibold text-gray-900">Travel History</h1>
+        <PrimaryBtn variant="outline" size="lg">
+          <span className="flex items-center justify-center gap-x-2">
+            <Image
+              src="/Images/tracking/document-download.svg"
+              alt="Download"
+              height={16}
+              width={16}
+            />
+            Download PDF
+          </span>
+        </PrimaryBtn>
+      </div>
+
+      {/* Time Zone Selector */}
+      <div className="mb-6 flex flex-col gap-2 text-sm text-gray-600">
+        <span>Time zone</span>
+
+        <Select.Root value={timeZone} onValueChange={setTimeZone}>
+          <Select.Trigger
+            aria-label="Time zone"
+            className="inline-flex items-center justify-between px-3 py-1 border border-gray-300 rounded-md bg-white text-gray-900 cursor-pointer select-none w-[180px]"
+          >
+            <Select.Value />
+            <Select.Icon>
+              <ChevronDownIcon />
+            </Select.Icon>
+          </Select.Trigger>
+
+          <Select.Portal>
+            <Select.Content className="overflow-hidden rounded-md border border-gray-300 bg-white shadow-md">
+              <Select.ScrollUpButton className="flex items-center justify-center h-6 bg-gray-100 cursor-default">
+                <ChevronUpIcon />
+              </Select.ScrollUpButton>
+
+              <Select.Viewport className="p-2">
+                {["Local Scan Time", "UTC", "EST"].map((zone) => (
+                  <Select.Item
+                    key={zone}
+                    value={zone}
+                    className="relative flex items-center px-8 py-2 text-gray-900 rounded-md select-none cursor-pointer data-[highlighted]:bg-gray-200"
+                  >
+                    <Select.ItemText>{zone}</Select.ItemText>
+                    <Select.ItemIndicator className="absolute left-2 inline-flex items-center">
+                      <CheckIcon />
+                    </Select.ItemIndicator>
+                  </Select.Item>
+                ))}
+              </Select.Viewport>
+
+              <Select.ScrollDownButton className="flex items-center justify-center h-6 bg-gray-100 cursor-default">
+                <ChevronDownIcon />
+              </Select.ScrollDownButton>
+            </Select.Content>
+          </Select.Portal>
+        </Select.Root>
+      </div>
+
+      {/* Table Header */}
+      <div className="grid grid-cols-12 gap-0 text-sm font-medium text-gray-600 border border-gray-200">
+        <div className="col-span-3 border-r border-gray-200 p-4">Date</div>
+        <div className="col-span-6 border-r border-gray-200 p-4">Activity</div>
+        <div className="col-span-3 p-4">Place</div>
+      </div>
+
+      {/* Travel History Items */}
+      <div className="border-x border-b border-gray-200 divide-y divide-gray-100">
+        {travelData.map((item, index) => (
+          <div key={index} className="grid grid-cols-12">
+            {/* Date Column */}
+            <div className="col-span-3 border-r border-gray-200 p-4 ">
+              {item.date && (
+                <div className="text-sm text-gray-900 font-normal">
+                  {item.date}
+                </div>
+              )}
+            </div>
+
+            {/* Activity Column */}
+            <div className="col-span-6 border-r border-gray-200 p-3 z-10">
+              <div className="flex items-start gap-3 relative">
+                {/* Timeline Dot + Line */}
+                <div className="flex flex-col items-center">
+                  {/* vertical line */}
+                  {index > 0 && (
+                    <div className="absolute top-[-60px] left-[4px] bottom-10 w-px bg-black z-10" />
+                  )}
+                  {/* dot */}
+                  <div className="w-2 h-2 bg-black rounded-full z-10 mt-1" />
+                </div>
+
+                {/* Activity Text */}
+                <div>
+                  <div className="text-sm text-gray-500 mb-1">{item.time}</div>
+                  <div className="text-sm text-gray-900">{item.activity}</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Place Column */}
+            <div className="col-span-3 p-4">
+              {item.place && (
+                <div className="text-sm text-gray-900">{item.place}</div>
+              )}
+            </div>
+          </div>
         ))}
-      </tbody>
-    </table>
-  </div>
-);
-export default TravelHistoryTable;
+      </div>
+    </div>
+
+
+  );
+}
