@@ -58,10 +58,10 @@ export default function TravelHistory() {
   const [timeZone, setTimeZone] = useState("Local Scan Time");
 
   return (
-    <div className="mx-auto p-6 bg-gray-50">
+    <div className="mx-auto p-6 bg-gray-50 mb-[515px]">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-semibold text-gray-900">Travel History</h1>
+        <h1 className="text-2xl font-semibold text-tertiary">Travel History</h1>
         <PrimaryBtn variant="outline" size="lg">
           <span className="flex items-center justify-center gap-x-2">
             <Image
@@ -118,14 +118,14 @@ export default function TravelHistory() {
       </div>
 
       {/* Table Header */}
-      <div className="grid grid-cols-12 gap-0 text-sm  text-gray-600 font-bold border border-gray-200">
+      <div className="grid grid-cols-12 gap-0 text-sm  text-gray-600 font-bold border border-gray-200 bg-white">
         <div className="col-span-3 border-r border-gray-200 p-4">Date</div>
         <div className="col-span-5 border-r border-gray-200 p-4">Activity</div>
         <div className="col-span-4 p-4">Place</div>
       </div>
 
       {/* Travel History Items */}
-      <div className="border-x border-b border-gray-200 divide-y divide-gray-100">
+      <div className="border-x border-b border-gray-200 divide-y divide-gray-100 bg-white">
         {travelData.map((item, index) => (
           <div key={index} className="grid grid-cols-12">
             {/* Date Column */}

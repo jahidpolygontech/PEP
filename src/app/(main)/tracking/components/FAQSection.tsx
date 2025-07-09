@@ -1,18 +1,42 @@
+import Image from "next/image";
+
 const faqs = [
-    "How can I track my package?",
-    "How do I return a package?",
-    "Where is my delivery subscription?"
-  ]
-  
-  const FAQSection = () => (
-    <div className="bg-white p-6 shadow rounded-lg">
-      <h4 className="text-lg font-semibold text-gray-800 mb-4">FAQ</h4>
-      <ul className="space-y-3">
-        {faqs.map((faq, idx) => (
-          <li key={idx} className="cursor-pointer text-blue-600 hover:underline">{faq}</li>
+  "What does my shipment status mean?",
+  "Can I request proof of delivery?",
+  "What should I do if I can’t track my shipment?",
+  "How can I update my delivery address?",
+];
+
+const FAQSection = () => {
+  return (
+    <div className="w-full py-6 rounded-lg">
+      <h4 className="text-xl font-semibold text-accent mb-8 text-start uppercase text-tertiary">
+        FAQ
+      </h4>
+      <div className="flex flex-col gap-4">
+        {faqs.map((question, index) => (
+          <div
+            key={index}
+            className="w-full px-4 rounded-lg cursor-pointer bg-tertiary"
+          >
+            <div className="flex items-center w-full gap-4">
+              <button className="py-4 flex justify-center items-center">
+                <Image
+                  src="/Images/tracking/add-square.svg"
+                  alt="Collapse"
+                  width={22}
+                  height={22}
+                />
+              </button>
+              <div className="text-black lg:text-base text-sm">
+                {question}
+              </div>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
-  )
-  export default FAQSection;
-  
+  );
+};
+
+export default FAQSection;
