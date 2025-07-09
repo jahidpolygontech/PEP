@@ -8,7 +8,9 @@ const page = () => {
         <div>
             <Navbar />
             <LoginForm />
-            <Footer />
+           <div className='mt-5'>
+           <Footer />
+           </div>
         </div>
     );
 };
