@@ -1,16 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar/Navbar";
-import Footer from "@/components/footer/Footer";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-poppins",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
-
 
 export const metadata: Metadata = {
   title: "PEP",
@@ -23,15 +12,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${poppins.variable}`}>
-      <body>
-      <>
-      <Navbar />
-      {/* <main>{children}</main> */}
+    <html lang="en">
+    <body>
       {children}
-      <Footer />
-    </>
-      </body>
-    </html>
+    </body>
+  </html>
   );
 }

@@ -1,14 +1,18 @@
-
-import React from "react";
+import Footer from "@/components/footer/Footer";
+import Navbar from "@/components/navbar/Navbar";
 
 export default function AuthLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <>
-      <main>{children}</main>
-    </>
+    <html lang="en">
+      <body>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
+    </html>
   );
 }
