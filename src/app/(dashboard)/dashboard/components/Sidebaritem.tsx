@@ -28,11 +28,9 @@ const sidebarItems: SidebarItem[] = [
 const SidebarItems = ({ selectedItemId, onSelect }: SidebarItemsProps) => {
   const handleClick = (item: SidebarItem) => {
     if (item.isLogout) {
-      //  Handle logout logic here
+      //  Add logout logic here
       console.log("Logging out...");
-      return;
     }
-
     onSelect(item.id);
   };
 
@@ -40,25 +38,15 @@ const SidebarItems = ({ selectedItemId, onSelect }: SidebarItemsProps) => {
     <div className="w-full flex flex-col items-center gap-4">
       {sidebarItems.map((item, index) => {
         const isActive = item.id === selectedItemId;
-        const commonClasses = `w-full flex items-center gap-4 px-4 py-3 rounded-lg text-sm font-medium cursor-pointer transition-colors`;
-
-        // Add a divider before logout
-        const isBeforeLogout = item.isLogout && index !== 0;
+        const showDivider = item.isLogout && index !== 0;
 
         return (
           <div key={item.id} className="w-full">
-            {isBeforeLogout && (
-              <div className="w-60 my-4 border-t border-gray-100 mx-auto"></div>
-            )}
+            {showDivider && <div className="w-60 my-4 border-t border-gray-100 mx-auto" />}
             <div
               onClick={() => handleClick(item)}
-              className={`${commonClasses} ${
-                item.isLogout
-                  ? "text-black hover:bg-gray-100"
-                  : isActive
-                  ? "bg-secondary text-primary"
-                  : "text-black hover:bg-gray-100"
-              }`}
+              className={`w-full flex items-center gap-4 px-4 py-3 rounded-lg text-sm font-medium cursor-pointer transition-colors
+                ${isActive ? "bg-secondary text-primary" : "text-black hover:bg-gray-100"}`}
             >
               <Image src={item.icon} alt={item.alt} width={28} height={28} />
               <span>{item.label}</span>
