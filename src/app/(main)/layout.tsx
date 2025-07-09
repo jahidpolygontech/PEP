@@ -1,5 +1,3 @@
-import Footer from "@/components/footer/Footer";
-import Navbar from "@/components/navbar/Navbar";
 import React from "react";
 
 export default function LoggedInLayout({
@@ -9,9 +7,7 @@ export default function LoggedInLayout({
 }) {
   return (
     <>
-      <Navbar />
       <main>{children}</main>
-      <Footer />
     </>
   );
 }

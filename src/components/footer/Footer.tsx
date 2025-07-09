@@ -29,9 +29,9 @@ const Footer: React.FC = () => {
               <Image
                 src="/Images/logo.svg"
                 alt="PEP Express Transport System"
-                width={200}
-                height={60}
-                className="mb-4 max-w-[150px] sm:max-w-[200px]"
+                width={320}
+                height={80}
+                className="mb-4 object-cover"
               />
             </div>
             <p className="text-sm leading-relaxed mb-8">

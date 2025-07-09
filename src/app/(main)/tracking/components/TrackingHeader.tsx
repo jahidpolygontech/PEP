@@ -53,7 +53,7 @@ const TrackingHeader = () => (
     </div>
 
     {/* Action Buttons */}
-    <div className="flex flex-col bg-gray-50 p-2">
+    <div className="flex flex-col bg-gray-50 px-6 py-2">
       <div className="flex items-center gap-8 mt-2">
         {/* Status */}
         <div className="flex items-center gap-3">

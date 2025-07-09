@@ -11,8 +11,9 @@ const NAV_LINKS = [
 
 const Navbar = () => (
   <header className="w-full h-20 flex items-center justify-between bg-primary text-white px-72">
-    <Link href="/" className="flex items-center" aria-label="PEP Home">
-      <Image src="/Images/logo.svg" alt="PEP Logo" width={126} height={33} priority />
+    <Link href="/" aria-label="PEP Home">
+    <Image src="/Images/logo.svg" alt="PEP Logo" width={320} height={80} className="object-cover"/>
+
     </Link>
     
     <nav aria-label="Main navigation">

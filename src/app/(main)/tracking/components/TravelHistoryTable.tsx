@@ -51,10 +51,8 @@ const travelData: TravelHistoryItem[] = [
   },
 ];
 
-// Fallback Unicode icons
+
 const CheckIcon = () => <span className="text-green-600">✓</span>;
-const ChevronDownIcon = () => <span>▼</span>;
-const ChevronUpIcon = () => <span>▲</span>;
 
 export default function TravelHistory() {
   const [timeZone, setTimeZone] = useState("Local Scan Time");
@@ -78,26 +76,24 @@ export default function TravelHistory() {
       </div>
 
       {/* Time Zone Selector */}
-      <div className="mb-6 flex flex-col gap-2 text-sm text-gray-600">
-        <span>Time zone</span>
+      <div className="mb-5">
 
         <Select.Root value={timeZone} onValueChange={setTimeZone}>
           <Select.Trigger
             aria-label="Time zone"
-            className="inline-flex items-center justify-between px-3 py-1 border border-gray-300 rounded-md bg-white text-gray-900 cursor-pointer select-none w-[180px]"
+            className="inline-flex items-center justify-between px-4 py-3 gap-4 border border-gray-300 rounded-md bg-white text-gray-900 cursor-pointer select-none"
           >
             <Select.Value />
-            <Select.Icon>
-              <ChevronDownIcon />
+            <Select.Icon >
+            <Image src="/Images/tracking/down.svg" alt="down" width={20} height={20}/>
             </Select.Icon>
           </Select.Trigger>
 
           <Select.Portal>
             <Select.Content className="overflow-hidden rounded-md border border-gray-300 bg-white shadow-md">
               <Select.ScrollUpButton className="flex items-center justify-center h-6 bg-gray-100 cursor-default">
-                <ChevronUpIcon />
+               {/* this is for up */}
               </Select.ScrollUpButton>
-
               <Select.Viewport className="p-2">
                 {["Local Scan Time", "UTC", "EST"].map((zone) => (
                   <Select.Item
@@ -105,16 +101,16 @@ export default function TravelHistory() {
                     value={zone}
                     className="relative flex items-center px-8 py-2 text-gray-900 rounded-md select-none cursor-pointer data-[highlighted]:bg-gray-200"
                   >
-                    <Select.ItemText>{zone}</Select.ItemText>
-                    <Select.ItemIndicator className="absolute left-2 inline-flex items-center">
+                    <Select.ItemText className="font-bold"> <span className="text-gray-600">Time zone</span> {zone}</Select.ItemText>
+                    <Select.ItemIndicator className="absolute left-4 inline-flex items-center">
                       <CheckIcon />
                     </Select.ItemIndicator>
                   </Select.Item>
                 ))}
               </Select.Viewport>
 
-              <Select.ScrollDownButton className="flex items-center justify-center h-6 bg-gray-100 cursor-default">
-                <ChevronDownIcon />
+              <Select.ScrollDownButton className="flex items-center gap-6 justify-center h-6 bg-gray-100 cursor-default">
+              <Image src="/Images/tracking/down.svg" alt="down" width={20} height={20}/>
               </Select.ScrollDownButton>
             </Select.Content>
           </Select.Portal>
@@ -122,10 +118,10 @@ export default function TravelHistory() {
       </div>
 
       {/* Table Header */}
-      <div className="grid grid-cols-12 gap-0 text-sm font-medium text-gray-600 border border-gray-200">
+      <div className="grid grid-cols-12 gap-0 text-sm  text-gray-600 font-bold border border-gray-200">
         <div className="col-span-3 border-r border-gray-200 p-4">Date</div>
-        <div className="col-span-6 border-r border-gray-200 p-4">Activity</div>
-        <div className="col-span-3 p-4">Place</div>
+        <div className="col-span-5 border-r border-gray-200 p-4">Activity</div>
+        <div className="col-span-4 p-4">Place</div>
       </div>
 
       {/* Travel History Items */}
@@ -142,7 +138,7 @@ export default function TravelHistory() {
             </div>
 
             {/* Activity Column */}
-            <div className="col-span-6 border-r border-gray-200 p-3 z-10">
+            <div className="col-span-5 border-r border-gray-200 p-3 z-10">
               <div className="flex items-start gap-3 relative">
                 {/* Timeline Dot + Line */}
                 <div className="flex flex-col items-center">
@@ -154,7 +150,6 @@ export default function TravelHistory() {
                   <div className="w-2 h-2 bg-black rounded-full z-10 mt-1" />
                 </div>
 
-                {/* Activity Text */}
                 <div>
                   <div className="text-sm text-gray-500 mb-1">{item.time}</div>
                   <div className="text-sm text-gray-900">{item.activity}</div>
