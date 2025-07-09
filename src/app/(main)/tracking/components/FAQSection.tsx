@@ -1,3 +1,4 @@
+import PrimaryBtn from "@/components/button/PrimaryButton";
 import Image from "next/image";
 
 const faqs = [
@@ -9,7 +10,7 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <div className="w-full py-6 rounded-lg">
+    <div className="w-full py-6  border-b border-t mt-8" >
       <h4 className="text-xl font-semibold text-accent mb-8 text-start uppercase text-tertiary">
         FAQ
       </h4>
@@ -28,12 +29,29 @@ const FAQSection = () => {
                   height={22}
                 />
               </button>
-              <div className="text-black lg:text-base text-sm">
-                {question}
-              </div>
+              <div className="text-black lg:text-base text-sm">{question}</div>
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="flex justify-center items-center gap-6 mt-8">
+        <PrimaryBtn
+          variant="outline"
+          size="lg"
+          className="border-primary border-2 text- text-primary text-base font-semibold"
+        >
+          view All FAQs
+        </PrimaryBtn>
+
+        <PrimaryBtn
+          variant="outline"
+          size="lg"
+          className="border-primary border-2 text- text-primary text-base font-semibold"
+        >
+          Customer Support
+        </PrimaryBtn>
+       
       </div>
     </div>
   );

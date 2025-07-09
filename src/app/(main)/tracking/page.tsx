@@ -13,7 +13,6 @@ export default function TrackingPage() {
         <TrackingDetailsCard />
         <TrackingUpdates />
       </div>
-
       <FAQSection />
       <TravelHistoryTable />
     </div>

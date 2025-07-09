@@ -58,7 +58,7 @@ export default function TravelHistory() {
   const [timeZone, setTimeZone] = useState("Local Scan Time");
 
   return (
-    <div className="mx-auto p-6 bg-gray-50 mb-[515px]">
+    <div className="mx-auto p-6 bg-gray-50 mb-[515px] mt-8">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-semibold text-tertiary">Travel History</h1>

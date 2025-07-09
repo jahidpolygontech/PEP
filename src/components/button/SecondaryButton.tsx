@@ -1,8 +1,8 @@
 import Image from "next/image";
 
 interface SecondaryBtnProps {
-  iconSrc: string;
-  alt: string;
+  iconSrc?: string;
+  alt?: string;
   label: string;
   onClick?: () => void;
   borderColor?: string; 
@@ -10,7 +10,7 @@ interface SecondaryBtnProps {
 
 const SecondaryBtn: React.FC<SecondaryBtnProps> = ({
   iconSrc,
-  alt,
+  alt="icon",
   label,
   onClick,
   borderColor = "border-blue-600", 
@@ -20,7 +20,7 @@ const SecondaryBtn: React.FC<SecondaryBtnProps> = ({
       onClick={onClick}
       className={`flex items-center gap-1 px-14 py-2 text-primary font-medium bg-white rounded hover:bg-gray-100 border text-base ${borderColor} cursor-pointer`}
     >
-      <Image src={iconSrc} alt={alt} width={20} height={20} />
+      {iconSrc && <Image src={iconSrc} alt={alt} width={20} height={20} />}
       {label}
     </button>
   );
