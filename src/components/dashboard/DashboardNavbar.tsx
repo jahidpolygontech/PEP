@@ -14,7 +14,7 @@ const DashboardNavbar = () => {
     <header className="w-full h-20 bg-primary text-white font-semibold">
       <div className="mx-auto px-6 h-full flex items-center justify-between">
         {/* Left Section: Logo + Nav Links */}
-        <div className="flex items-center gap-10 lg:ml-80">
+        <div className="flex items-center gap-10 2xl:ml-[280px]">
           <Link href="/" aria-label="PEP Home">
             <Image
               src="/Images/logo.svg"

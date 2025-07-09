@@ -13,7 +13,7 @@ export default function DashboardLayout({
       <body>
         <DashboardNavbar />
         <div className="flex w-full">
-         <Sidebar/>
+        <Sidebar/>
           <main className="flex flex-1">{children}</main>
         </div>
         <Footer />

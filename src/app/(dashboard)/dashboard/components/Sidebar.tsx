@@ -7,7 +7,7 @@ const Sidebar = () => {
   const [selectedItemId, setSelectedItemId] = useState("dashboard");
 
   return (
-    <aside className="select-none px-3 py-4 min-h-screen bg-white border-r border-gray-100 flex flex-col justify-start items-center text-black shadow-md">
+    <aside className="select-none px-3 py-4 min-h-screen bg-white  border-gray- flex flex-col justify-start items-center text-black shadow-md">
       <SidebarItems selectedItemId={selectedItemId} onSelect={setSelectedItemId} />
     </aside>
   );
