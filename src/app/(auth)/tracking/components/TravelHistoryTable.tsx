@@ -62,7 +62,7 @@ export default function TravelHistory() {
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-semibold text-tertiary">Travel History</h1>
-        <PrimaryBtn variant="outline" size="lg">
+        <PrimaryBtn variant="outline" size="md">
           <span className="flex items-center justify-center gap-x-2">
             <Image
               src="/Images/tracking/document-download.svg"
@@ -70,7 +70,7 @@ export default function TravelHistory() {
               height={16}
               width={16}
             />
-            Download PDF
+            Download History
           </span>
         </PrimaryBtn>
       </div>

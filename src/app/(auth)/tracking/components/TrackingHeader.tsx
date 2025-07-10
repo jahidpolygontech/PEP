@@ -1,5 +1,4 @@
 import PrimaryBtn from "@/components/button/PrimaryButton";
-import SecondaryBtn from "@/components/button/SecondaryButton";
 import Image from "next/image";
 
 const TrackingHeader = () => (
@@ -37,7 +36,7 @@ const TrackingHeader = () => (
         <PrimaryBtn
           type="submit"
           className="w-full bg-primary flex items-center justify-center gap-2"
-          size="lg"
+          size="sm"
         >
           <span className="inline-flex items-center gap-2">
             View Shipment Details
@@ -83,26 +82,36 @@ const TrackingHeader = () => (
         </div>
       </div>
       <div className="flex items-center gap-3 mt-3">
-        <SecondaryBtn
-          iconSrc="/Images/tracking/edit.svg"
-          alt="Proof of Delivery"
-          label="Proof of Delivery"
-        />
-        <SecondaryBtn
-          iconSrc="/Images/tracking/messages.svg"
-          alt="Chat with Us"
-          label="Chat with Us"
-        />
-        <SecondaryBtn
-          iconSrc="/Images/tracking/24-support.svg"
-          alt="Customer Support"
-          label="Customer Support"
-        />
-        <SecondaryBtn
-          iconSrc="/Images/tracking/notification.svg"
-          alt="Get Notification"
-          label="Get Notification"
-        />
+        <div className="space-y-3 space-x-[30px] mt-3">
+          <PrimaryBtn
+            variant="secondary"
+            size="lg"
+            startIcon="/Images/tracking/edit.svg"
+            iconAlt="Proof of Delivery"
+            label="Proof of Delivery"
+          />
+          <PrimaryBtn
+            variant="secondary"
+            size="lg"
+            startIcon="/Images/tracking/messages.svg"
+            iconAlt="Chat with Us"
+            label="Chat with Us"
+          />
+          <PrimaryBtn
+            variant="secondary"
+            size="lg"
+            startIcon="/Images/tracking/24-support.svg"
+            iconAlt="Customer Support"
+            label="Customer Support"
+          />
+          <PrimaryBtn
+            variant="secondary"
+            size="lg"
+            startIcon="/Images/tracking/notification.svg"
+            iconAlt="Get Notification"
+            label="Get Notification"
+          />
+        </div>
       </div>
     </div>
   </>

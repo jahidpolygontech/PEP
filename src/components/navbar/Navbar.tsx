@@ -28,7 +28,7 @@ const Navbar = () => (
 
     <div className="flex items-center gap-6">
       <Link href="/" className="text-sm font-medium leading-4 block" aria-label="Sign up or Login">
-        signup/login
+        Signup/Login
       </Link>
       <Image src="/Images/profile-circle.svg" alt="Profile" width={24} height={24} />
       <Image src="/Images/search-normal.svg" alt="Search" width={24} height={24} />

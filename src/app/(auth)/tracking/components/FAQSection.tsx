@@ -39,7 +39,6 @@ const FAQSection = () => {
         <PrimaryBtn
           variant="outline"
           size="lg"
-          className="border-primary border-2 text- text-primary text-base font-semibold"
         >
           view All FAQs
         </PrimaryBtn>
@@ -47,7 +46,6 @@ const FAQSection = () => {
         <PrimaryBtn
           variant="outline"
           size="lg"
-          className="border-primary border-2 text- text-primary text-base font-semibold"
         >
           Customer Support
         </PrimaryBtn>

@@ -69,7 +69,7 @@ export function LoginForm() {
           </Link>
         </div>
 
-        <PrimaryBtn type="submit" className="w-full bg-primary" size="lg">
+        <PrimaryBtn type="submit" className="w-full" size="lg" variant="primary">
           Login
         </PrimaryBtn>
 

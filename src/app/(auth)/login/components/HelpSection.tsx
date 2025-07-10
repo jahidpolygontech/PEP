@@ -14,7 +14,7 @@ export function HelpSection() {
             Our customer support team is here to help you with account setup, service inquiries, login issues, or any
             other questions you might have.
           </p>
-          <PrimaryBtn variant="outline" size="sm">
+          <PrimaryBtn variant="outline" size="xs">
             Customer Support
           </PrimaryBtn>
         </div>
