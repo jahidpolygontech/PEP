@@ -82,7 +82,7 @@ const SidebarNavbar = () => {
             <ul className="flex items-center gap-10 text-sm font-medium">
               {NAV_LINKS.map(({ href, label }) => (
                 <li key={label}>
-                  <Link href={href}>{label}</Link>
+                  <Link href={href} className="hover:text-gray-300">{label}</Link>
                 </li>
               ))}
             </ul>
@@ -118,7 +118,7 @@ const SidebarNavbar = () => {
               </div>
             )}
           </div>
-          <p>John Doe</p>
+          <p className="hover:text-gray-300">John Doe</p>
 
           {/* Search Dropdown */}
           <div className="relative" ref={searchRef}>
