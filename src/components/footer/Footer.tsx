@@ -94,45 +94,43 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Bottom Right Floating Buttons */}
-      <div className="mt-4 flex justify-end px-3">
-        <div className="flex items-center gap-2 sm:gap-3">
-          {/* Chat Button */}
-          <button
-            className="bg-white text-primary px-3 sm:px-4 py-2 sm:py-3 rounded-sm shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 sm:gap-3 group"
-            style={{
-              minWidth: "200px",
-              maxWidth: "299px",
-              height: "40px",
-              boxShadow:
-                "0 16px 48px rgba(24, 39, 75, 0.08), 0 8px 16px rgba(24, 39, 75, 0.12)",
-            }}
-          >
-            <Image
-              src="/Images/footer/headphoneicon.png"
-              alt="Headphone"
-              width={16}
-              height={16}
-              className="sm:w-5 sm:h-5"
-            />
-            <span className="text-xs sm:text-sm font-medium flex-1 text-left whitespace-nowrap overflow-hidden cursor-pointer">
-              Need Help? Chat with Us
-            </span>
-          </button>
+      <div className="fixed bottom-4 right-4 z-50 flex items-center gap-3">
+        {/* Chat Button */}
+        <button
+          className="bg-white text-primary px-3 sm:px-4 py-2 sm:py-3 rounded-sm shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 sm:gap-3 group"
+          style={{
+            minWidth: "200px",
+            maxWidth: "299px",
+            height: "40px",
+            boxShadow:
+              "0 16px 48px rgba(24, 39, 75, 0.08), 0 8px 16px rgba(24, 39, 75, 0.12)",
+          }}
+        >
+          <Image
+            src="/Images/footer/headphoneicon.png"
+            alt="Headphone"
+            width={16}
+            height={16}
+            className="sm:w-5 sm:h-5"
+          />
+          <span className=" text-gray font-medium flex-1 text-left whitespace-nowrap overflow-hidden cursor-pointer">
+            Need Help? Chat with Us
+          </span>
+        </button>
 
-          {/* Scroll to Top */}
-          <button
-            className="flex items-center justify-center transition-all duration-300 hover:shadow-xl"
-            style={{ width: "40px", height: "40px" }}
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          >
-            <Image
-              src="/Images/footer/arrow-up.png"
-              alt="Scroll to top"
-              width={48}
-              height={48}
-            />
-          </button>
-        </div>
+        {/* Scroll to Top */}
+        <button
+          className="flex items-center justify-center transition-all duration-300 hover:shadow-xl"
+          style={{ width: "40px", height: "40px" }}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          <Image
+            src="/Images/footer/arrow-up.png"
+            alt="Scroll to top"
+            width={48}
+            height={48}
+          />
+        </button>
       </div>
     </footer>
   );
