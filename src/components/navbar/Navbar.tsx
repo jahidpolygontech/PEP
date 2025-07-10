@@ -64,10 +64,10 @@ const Navbar = () => {
 
       {/* Navigation Links */}
       <nav aria-label="Main navigation">
-        <ul className="flex items-center gap-10 text-sm font-medium">
+        <ul className="flex items-center gap-10 text-sm font-medium ">
           {NAV_LINKS.map(({ href, label }) => (
             <li key={label}>
-              <Link href={href}>{label}</Link>
+              <Link href={href} className="hover:text-gray-300">{label}</Link>
             </li>
           ))}
         </ul>
@@ -77,8 +77,8 @@ const Navbar = () => {
       <div className="flex items-center gap-6 relative">
         <Link
           href="/"
-          className="text-sm font-medium leading-4 block"
-          aria-label="Sign up or Login"
+          className="text-sm font-medium leading-4 block hover:text-gray-300"
+          aria-label="Sign up or Login "
         >
           Signup/Login
         </Link>
