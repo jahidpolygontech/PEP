@@ -60,7 +60,7 @@ export default function Timeline() {
       title: "Successfully Delivered",
       description: "Delivery man successfully deliver product to Jack man.",
       image: "/Images/tracking/Green.svg",
-      iconColor: "bg-green-500 mb-10",
+      iconColor: "bg-green mb-10",
     },
   ];
 

@@ -25,6 +25,7 @@
   --color-quaternary:#42A5F5;
   --color-prevention: #F2F2F2;
   --color-gray:#575757;
+  --color-green:#DAEEE7;
   --color-foreground: var(--foreground);
   --font-sans: var(--font-poppins);
   --font-mono: var(--font-geist-mono);
