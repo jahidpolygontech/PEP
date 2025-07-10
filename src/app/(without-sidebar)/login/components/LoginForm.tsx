@@ -1,12 +1,12 @@
 "use client";
 
-import Link from "next/link";
-import type React from "react";
-import { useState } from "react";
-import { HelpSection } from "./HelpSection";
 import PrimaryBtn from "@/components/button/PrimaryButton";
 import PrimaryInput from "@/components/input/PrimaryInput";
+import Link from "next/link";
+import { useState } from "react";
+import { HelpSection } from "./HelpSection";
 import Checkbox from "@/components/checkbox/CheckBox";
+
 
 export function LoginForm() {
   const [formData, setFormData] = useState({
