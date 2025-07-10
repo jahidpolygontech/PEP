@@ -1,12 +1,11 @@
 "use client";
-
 import PrimaryBtn from "@/components/button/PrimaryButton";
-import PrimaryInput from "@/components/input/PrimaryInput";
+import Checkbox from "@/components/checkbox/CheckBox";
 import Link from "next/link";
 import { useState } from "react";
 import { HelpSection } from "./HelpSection";
-import Checkbox from "@/components/checkbox/CheckBox";
-
+import TextField from "@/components/custom-input/TextField";
+import PasswordField from "@/components/custom-input/PasswordField";
 
 export function LoginForm() {
   const [formData, setFormData] = useState({
@@ -29,31 +28,28 @@ export function LoginForm() {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto p-6 ">
+    <div className="w-full max-w-md mx-auto p-6">
       <div className="text-center mb-8">
-        <h1
-          className="text-3xl
-         font-semibold text-gray-900"
-        >
+        <h1 className="text-3xl font-semibold text-gray-900">
           Enter Your Username and Password to Login
         </h1>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        <PrimaryInput
-          label="username"
+        <TextField
+          label="Username"
           name="username"
           placeholder="e.g. jhondoe123"
           value={formData.username}
           onChange={handleInputChange}
         />
 
-        <PrimaryInput
+        <PasswordField
           label="Password"
-          showPasswordToggle
           name="password"
           placeholder="Enter password"
           value={formData.password}
+          onChange={handleInputChange}
         />
 
         <div className="flex flex-wrap text-sm items-center justify-between">
@@ -69,14 +65,17 @@ export function LoginForm() {
           </Link>
         </div>
 
-        <PrimaryBtn type="submit" className="w-full" size="lg" variant="primary">
+        <PrimaryBtn
+          type="submit"
+          className="w-full"
+          size="lg"
+          variant="primary"
+        >
           Login
         </PrimaryBtn>
 
         <div className="text-center">
-          <span className="text-sm text-gray-600">
-            Don&apos;t have account?{" "}
-          </span>
+          <span className="text-sm text-gray-600">Don&apos;t have account? </span>
           <Link href="/" className="text-primary hover:underline">
             Create Account
           </Link>
