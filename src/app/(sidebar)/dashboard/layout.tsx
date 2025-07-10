@@ -1,6 +1,6 @@
-import DashboardNavbar from "@/components/dashboard/DashboardNavbar";
 import Footer from "@/components/footer/Footer";
 import Sidebar from "./components/Sidebar";
+import SidebarNavbar from "@/components/navbar/SidebarNavbar";
 
 
 export default function DashboardLayout({
@@ -11,7 +11,7 @@ export default function DashboardLayout({
   return (
     <html lang="en">
       <body>
-        <DashboardNavbar />
+        <SidebarNavbar />
         <div className="flex w-full">
         <Sidebar/>
           <main className="flex flex-1">{children}</main>
