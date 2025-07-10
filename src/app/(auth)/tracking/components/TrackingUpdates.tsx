@@ -9,7 +9,7 @@ export default function Timeline() {
       title: "Order Received",
       description: "Delivery man successfully deliver product to Jack man.",
       image: "/Images/tracking/Group.svg",
-      iconColor: "bg-secondary mb-10",
+      iconColor: "bg-secondary",
     },
     {
       time: "11:18 AM",
@@ -23,7 +23,7 @@ export default function Timeline() {
       date: "28 Jan",
       title: "",
       description: "Your order is ready to be shipped from warehouse",
-      iconColor: "bg-primary mb-12",
+      iconColor: "bg-primary mb-10",
     },
     {
       time: "11:18 AM",
@@ -31,28 +31,28 @@ export default function Timeline() {
       title: "Order Received",
       description: "Delivery man successfully deliver product to Jack man.",
       image: "/Images/tracking/Group.svg",
-      iconColor: "bg-primary mb-12",
+      iconColor: "bg-secondary mb-10",
     },
     {
       time: "11:18 AM",
       date: "28 Jan",
       title: "",
       description: "Your order is being processed in warehouse",
-      iconColor: "bg-primary mb-12",
+      iconColor: "bg-primary mb-10",
     },
     {
       time: "11:18 AM",
       date: "28 Jan",
       title: "",
       description: "Your order is being processed in warehouse",
-      iconColor: "bg-primary mb-12",
+      iconColor: "bg-primary mb-10",
     },
     {
       time: "11:18 AM",
       date: "28 Jan",
       title: "",
       description: "Your order is being processed in warehouse",
-      iconColor: "bg-primary mb-12",
+      iconColor: "bg-primary mb-10",
     },
     {
       time: "11:18 AM",
@@ -60,7 +60,7 @@ export default function Timeline() {
       title: "Successfully Delivered",
       description: "Delivery man successfully deliver product to Jack man.",
       image: "/Images/tracking/Green.svg",
-      iconColor: "bg-green-500",
+      iconColor: "bg-green-500 mb-10",
     },
   ];
 
@@ -70,40 +70,47 @@ export default function Timeline() {
 
       <div className="max-w-2xl mx-auto bg-gray-50 rounded p-4">
         <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-26 bottom-10 top-2 w-0.5 bg-primary" />
+          {/* One continuous vertical line */}
+          <div className="absolute left-[115px] top-4 bottom-10 w-0.5 bg-primary z-0" />
 
           {timelineItems.map((item, index) => (
             <div
               key={index}
               className="relative flex items-start mb-16 last:mb-0"
             >
-              {/* Time & Date */}
+              {/* Left: Time & Date */}
               <div className="flex flex-col items-center w-20 mr-4">
-                <span className="text-sm font-medium text-gray-700">{item.time}</span>
+                <span className="text-sm font-medium text-gray-700">
+                  {item.time}
+                </span>
                 <span className="text-xs text-gray-500">{item.date}</span>
               </div>
 
-              {/* Icon/Image */}
-              <div
-                className={`relative z-10 flex items-center justify-center rounded-full w-4 h-4 mr-4 mt-2 ${
-                  item.image ? "bg-gray-300" : item.iconColor
-                }`}
-              >
-                {item.image ? (
-                  <Image
-                    src={item.image}
-                    alt="Timeline icon"
-                    width={18}
-                    height={18}
-                    className="object-contain z-10"
-                  />
-                ) : (
-                  <Circle className="w-2 h-2 text-white fill-current" />
-                )}
+              {/* Middle: Icon only (line is already drawn behind) */}
+              <div className="relative flex flex-col items-center w-10 mr-4 z-10">
+                <div
+                  className={`flex items-center justify-center rounded-full mt-2 ${
+                    item.image
+                      ? `w-10 h-10 ${item.iconColor}`
+                      : `w-4 h-4 ${item.iconColor}`
+                  }`}
+                >
+                  {item.image ? (
+                    <div className="w-4 h-4 relative">
+                      <Image
+                        src={item.image}
+                        alt="Timeline icon"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  ) : (
+                    <Circle className="w-2 h-2 text-white fill-current" />
+                  )}
+                </div>
               </div>
 
-              {/* Title & Description */}
+              {/* Right: Content */}
               <div className="flex-1 pt-0.5">
                 {item.title && (
                   <h3
