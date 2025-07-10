@@ -3,7 +3,7 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { Search } from "lucide-react";
 import Image from "next/image";
 
-const TrackingDetailsCard = () => (
+const TrackingDetailsSection = () => (
   <div className="p-6 bg-gray-50  shadow rounded-lg space-y-4">
     {/* search section */}
     <div className="bg-white p-2 rounded-md border border-gray-300 w-full ">
@@ -132,4 +132,4 @@ const TrackingDetailsCard = () => (
     </div>
   </div>
 );
-export default TrackingDetailsCard;
+export default TrackingDetailsSection;

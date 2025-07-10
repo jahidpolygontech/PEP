@@ -1,5 +1,5 @@
 import FAQSection from "./components/FAQSection";
-import TrackingDetailsCard from "./components/TrackingDetailsCard";
+import TrackingDetailsSection from "./components/TrackingDetailsSection";
 import TrackingHeader from "./components/TrackingHeader";
 import TrackingUpdates from "./components/TrackingUpdates";
 import TravelHistoryTable from "./components/TravelHistoryTable";
@@ -10,7 +10,7 @@ export default function TrackingPage() {
       <TrackingHeader />
 
       <div className="grid md:grid-cols-2 gap-6">
-        <TrackingDetailsCard />
+        <TrackingDetailsSection />
         <TrackingUpdates />
       </div>
       <FAQSection />
