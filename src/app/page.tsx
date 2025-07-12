@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
-import { LoginForm } from "./(without-sidebar)/login/components/LoginForm";
+import { LoginForm } from "./(center-layout)/login/components/LoginForm";
 
 const page = () => {
   return (
