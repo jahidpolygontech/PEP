@@ -88,7 +88,7 @@ Src/
 
 ### Changing or Adding Layouts
 
-If you want to **change the layout** for your pages or add a new layout structure, here’s how to do it:
+If you want to **change the layout** for your pages, here’s how to do it:
 
 1. **Locate the layout files:**
    - Center Layout: `src/app/(center-layout)/layout.tsx`
