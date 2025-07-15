@@ -55,7 +55,7 @@ Src/
 
 ```
 
-### Major Components Overview
+## Major Components Overview
 
 - **`src/app/`**  
   Root directory containing all route pages, layouts, and shared structure of the app.
