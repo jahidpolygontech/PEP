@@ -86,23 +86,19 @@ Src/
 
 ## Layouts & Pages
 
-## Layout Structures
+### Changing or Adding Layouts
 
-This project uses **two main layout structures** to separate concerns and UI design patterns:
+If you want to **change the layout** for your pages or add a new layout structure, here’s how to do it:
 
-### 1. Center Layout (`src/app/(center-layout)/`)
+1. **Locate the layout files:**
+   - Center Layout: `src/app/(center-layout)/layout.tsx`
+   - Sidebar Layout: `src/app/(sidebar-layout)/layout.tsx`
 
-- Designed for pages that **do not require a sidebar**.
-- Includes a simple wrapper with a **Navbar** and **Footer**.
-- Content is centered on the page.
-- Suitable for standalone pages like authentication or tracking information.
-
-**Examples of pages using this layout:**
-
-- `login/` — User authentication UI  
-- `tracking/` — Shipment tracking information
+2. **Modify the layout wrapper** inside these files to adjust Navbar, Footer, Sidebar, or overall page structure.
 
 ---
+
+This folder-based layout system allows easy control over page structure and UI components across different parts of the app.
 
 ### 2. Sidebar Layout (`src/app/(sidebar-layout)/`)
 
