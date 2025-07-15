@@ -68,7 +68,7 @@ Src/
 - Global Homepage (page.tsx)
   The default landing page at `/`, typically for public users.
 
-- Sidebar Layout (`(sidebar)/)  
+- Sidebar Layout (`(sidebar-layout)/)  
   Layout used for internal/authenticated pages like the dashboard, includes sidebar, navbar, and footer.
 
 - Center Layout ((center-layout)/)
@@ -112,7 +112,7 @@ This project uses **two main layout structures** to separate concerns and UI des
 
 ### This guide explains how to create new pages under the two existing layouts:
 - **Center Layout** (`src/app/(center-layout)/`)
-- **Sidebar Layout** (`src/app/(sidebar)`)
+- **Sidebar Layout** (`src/app/(sidebar-layout)`)
 
 ### 1. Adding a New Page under center-layout
 
@@ -148,10 +148,10 @@ export default function ProfilePage() {
 
 ### 2. Adding a New Page under Sidebar Layout
 
-**Folder Path:** `src/app/(sidebar)/<your-page-name>/page.tsx`
+**Folder Path:** `src/app/(sidebar-layout)/<your-page-name>/page.tsx`
 
 **Steps:**
-1. Create a new folder inside `(sidebar)/` (e.g., `orders`, `settings`)
+1. Create a new folder inside `(sidebar-layout)/` (e.g., `orders`, `settings`)
 2. Inside it, add a `page.tsx` file
 3. The page will be wrapped with Sidebar, SidebarNavbar, and Footer by default (from `layout.tsx`)
 
@@ -159,13 +159,13 @@ export default function ProfilePage() {
 ```
 src/
 └── app/
-    └── (sidebar)/
+    └── (sidebar-layout)/
         └── settings/
             └── page.tsx
 ```
 
 ```tsx
-// src/app/(sidebar)/settings/page.tsx
+// src/app/(sidebar-layout)/settings/page.tsx
 export default function SettingsPage() {
   return (
     <div className="p-6">
