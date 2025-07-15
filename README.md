@@ -126,42 +126,6 @@ export default function SettingsPage() {
 
 > **Note:** Sidebar, SidebarNavbar, and Footer will be applied automatically.
 
-## Login Components
-
-### LoginForm
-- **File:** `src/app/(without-sidebar)/login/components/LoginForm.tsx`
-- Main login form component with username/password fields
-
-### HelpSection
-- **File:** `src/app/(without-sidebar)/login/components/HelpSection.tsx`
-- Helper section for login assistance
-
-## Tracking Components
-
-### TrackingHeader
-- **File:** `src/app/(without-sidebar)/tracking/components/TrackingHeader.tsx`
-- Header component for tracking page
-
-### TrackingDetailsSection
-- **File:** `src/app/(without-sidebar)/tracking/components/TrackingDetailsSection.tsx`
-- Displays detailed tracking information
-
-### TrackingUpdates
-- **File:** `src/app/(without-sidebar)/tracking/components/TrackingUpdates.tsx`
-- Shows tracking status updates
-
-### FAQSection
-- **File:** `src/app/(without-sidebar)/tracking/components/FAQSection.tsx`
-- FAQ section for tracking page
-
-### TravelHistoryTable
-- **File:** `src/app/(without-sidebar)/tracking/components/TravelHistoryTable.tsx`
-- Table component for travel history
-
-### StatusBadge
-- **File:** `src/app/(without-sidebar)/tracking/components/StatusBadge.tsx`
-- Badge component for displaying status
-
 ## Shared UI Components
 
 ### Buttons (PrimaryButton)
