@@ -56,7 +56,8 @@ Src/
 
 ```
 
-## Major Components Overview
+### Major Components Overview
+```
 
 - **`src/app/`**  
   Root directory containing all route pages, layouts, and shared structure of the app.
@@ -82,7 +83,7 @@ Src/
 - **Dashboard Page (`dashboard/`)**  
   Main user interface post-login, rendered inside the sidebar layout with support for navigation and content management.
 ```
-```
+
 ## Layouts & Pages
 
 ### ✅ Adding New Pages Using Existing Layouts
