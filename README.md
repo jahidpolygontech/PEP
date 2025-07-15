@@ -86,7 +86,31 @@ Src/
 
 ## Layouts & Pages
 
-### ✅ Adding New Pages Using Existing Layouts
+## Layout Structures
+
+This project uses **two main layout structures** to separate concerns and UI design patterns:
+
+### 1. Center Layout (`src/app/(center-layout)/`)
+
+- Designed for pages that **do not require a sidebar**.
+- Includes a simple wrapper with a **Navbar** and **Footer**.
+- Content is centered on the page.
+- Suitable for standalone pages like authentication or tracking information.
+
+**Examples of pages using this layout:**
+
+- `login/` — User authentication UI  
+- `tracking/` — Shipment tracking information
+
+---
+
+### 2. Sidebar Layout (`src/app/(sidebar)/`)
+
+- Includes a **sidebar** for navigation, **top navbar**, and **footer**.
+- Meant for internal or authenticated pages such as dashboards or settings.
+- Suitable for pages requiring complex UI and navigation structure.
+
+
 
 This guide explains how to create new pages under the two existing layouts:
 - **Center Layout** (`src/app/(center-layout)/`)
