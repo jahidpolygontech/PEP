@@ -56,8 +56,33 @@ Src/
 
 ```
 
-## Major Components Overview
+ ## Major Components Overview
 
+- **`src/app/`**  
+  Root directory containing all route pages, layouts, and shared structure of the app.
+
+- **Root Layout (`layout.tsx`)**  
+  Applies global settings like fonts, metadata, and wraps all pages with a common layout.
+
+- **Global Homepage (`page.tsx`)**  
+  The default landing page at `/`, typically for public users.
+
+- **Sidebar Layout (`(sidebar)/`)**  
+  Layout used for internal/authenticated pages like the dashboard, includes sidebar, navbar, and footer.
+
+- **Center Layout (`(center-layout)/`)**  
+  Layout for routes like login and tracking, includes only navbar and footer (no sidebar).
+
+- **Login Page (`login/`)**  
+  Handles user authentication UI with `LoginForm` and `HelpSection` components.
+
+- **Tracking Page (`tracking/`)**  
+  Displays tracking information using components like `TrackingHeader`, `StatusBadge`, and `TravelHistoryTable`.
+
+- **Dashboard Page (`dashboard/`)**  
+  Main user interface post-login, rendered inside the sidebar layout with support for navigation and content management.
+
+```
 
 ```
 
