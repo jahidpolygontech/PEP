@@ -24,7 +24,7 @@ Src/
 │─app/
 ├── layout.tsx                # Root layout (fonts, Metadata)
 ├── page.tsx                  # Global homepage
-├── (without-sidebar)/        # Auth & tracking flows (no sidebar)
+├── (center-layout)/        # Auth & tracking flows (no sidebar)
 │   ├── layout.tsx            # Navbar + Footer wrapper
 │   ├── login/
 │   │   ├── components/
@@ -40,7 +40,7 @@ Src/
 │       │   ├── TravelHistoryTable.tsx
 │       │   └── StatusBadge.tsx
 │       └── page.tsx
-└── (sidebar)/
+└── (sidebar-layout)/
 |    └── dashboard/
 │         ├── layout.tsx        # Sidebar + navbar + footer
 │         └── page.tsx 
