@@ -7,8 +7,6 @@ Welcome to the comprehensive documentation of PEP. This guide covers the purpose
 - [App Directory Structure](#app-directory-structure)
 - [Major Components Overview](#major-components-overview)
 - [Layouts & Pages](#layouts--pages)
-- [Login Components](#login-components)
-- [Tracking Components](#tracking-components)
 - [Shared UI Components](#shared-ui-components)
   - [Buttons](#buttons-primarybutton)
   - [Checkbox](#checkbox-checkbox)
@@ -57,32 +55,31 @@ Src/
 ```
 
 ### Major Components Overview
-```
 
-- src/app/
+- **`src/app/`**  
   Root directory containing all route pages, layouts, and shared structure of the app.
 
-- Root Layout (layout.tsx)  
+- **Root Layout (`layout.tsx`)**  
   Applies global settings like fonts, metadata, and wraps all pages with a common layout.
 
-- Global Homepage (page.tsx)
+- **Global Homepage (`page.tsx`)**  
   The default landing page at `/`, typically for public users.
 
-- Sidebar Layout (`(sidebar-layout)/)  
+- **Sidebar Layout (`(sidebar-layout)/`)**  
   Layout used for internal/authenticated pages like the dashboard, includes sidebar, navbar, and footer.
 
-- Center Layout ((center-layout)/)
+- **Center Layout (`(center-layout)/`)**  
   Layout for routes like login and tracking, includes only navbar and footer (no sidebar).
 
-- Login Page (login/)  
+- **Login Page (`login/`)**  
   Handles user authentication UI with `LoginForm` and `HelpSection` components.
 
-- Tracking Page (tracking/) 
+- **Tracking Page (`tracking/`)**  
   Displays tracking information using components like `TrackingHeader`, `StatusBadge`, and `TravelHistoryTable`.
 
-- Dashboard Page (dashboard/)  
+- **Dashboard Page (`dashboard/`)**  
   Main user interface post-login, rendered inside the sidebar layout with support for navigation and content management.
-```
+
 
 ## Layouts & Pages
 
