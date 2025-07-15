@@ -5,6 +5,7 @@ Welcome to the comprehensive documentation of PEP. This guide covers the purpose
 ## 📋 Table of Contents
 
 - [App Directory Structure](#app-directory-structure)
+- [Major Components Overview](#major-component-overview)
 - [Layouts & Pages](#layouts--pages)
 - [Login Components](#login-components)
 - [Tracking Components](#tracking-components)
