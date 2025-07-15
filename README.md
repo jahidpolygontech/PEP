@@ -110,7 +110,7 @@ This project uses **two main layout structures** to separate concerns and UI des
 - Meant for internal or authenticated pages such as dashboards or settings.
 
 
-# This guide explains how to create new pages under the two existing layouts:
+### This guide explains how to create new pages under the two existing layouts:
 - **Center Layout** (`src/app/(center-layout)/`)
 - **Sidebar Layout** (`src/app/(sidebar)`)
 
