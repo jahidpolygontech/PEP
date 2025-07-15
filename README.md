@@ -104,7 +104,7 @@ This project uses **two main layout structures** to separate concerns and UI des
 
 ---
 
-### 2. Sidebar Layout (`src/app/(sidebar)/`)
+### 2. Sidebar Layout (`src/app/(sidebar-layout)/`)
 
 - Includes a **sidebar** for navigation, **top navbar**, and **footer**.
 - Meant for internal or authenticated pages such as dashboards or settings.
