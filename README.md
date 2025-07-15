@@ -173,9 +173,7 @@ For example, in `global.css`:
 Then in your components, apply these classes like this:
 
 ```tsx
-:root {
-<div className="text-primary">This text uses the primary color.</div>
-}
+<div className="**text-primary**">This text uses the primary color.</div>
 ```
 
 
