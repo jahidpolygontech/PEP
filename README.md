@@ -97,11 +97,6 @@ If you want to **change the layout** for your pages, here’s how to do it:
 
 This folder-based layout system allows easy control over page structure and UI components across different parts of the app.
 
-### 2. Sidebar Layout (`src/app/(sidebar-layout)/`)
-
-- Includes a **sidebar** for navigation, **top navbar**, and **footer**.
-- Meant for internal or authenticated pages such as dashboards or settings.
-
 
 ### This guide explains how to create new pages under the two existing layouts:
 - **Center Layout** (`src/app/(center-layout)/`)
