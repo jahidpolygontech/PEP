@@ -395,6 +395,6 @@ Use it in a sidebar layout:
 2. Install dependencies: `npm install`
 3. Run the development server: `npm run dev`
 4. Available routes:
-- http://localhost:3000/login –  login page
+- http://localhost:3000/login – login page
 - http://localhost:3000/dashboard – dashboard page
-- http://localhost:3000/tracking– tracking page
+- http://localhost:3000/tracking – tracking page
