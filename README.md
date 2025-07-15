@@ -54,7 +54,7 @@ Src/
      └── Navbar
      └── sidebar
 
-```
+
  ## Major Components Overview
 
 - **`src/app/`**  
