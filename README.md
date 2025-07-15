@@ -52,7 +52,13 @@ Src/
      └── Faq
      └── Footer     
      └── Navbar
-     └── sidebar 
+     └── sidebar
+
+```
+
+## Major Components Overview
+
+
 ```
 
 ## Layouts & Pages
