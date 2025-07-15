@@ -80,9 +80,7 @@ Src/
 
 - **Dashboard Page (`dashboard/`)**  
   Main user interface post-login, rendered inside the sidebar layout with support for navigation and content management.
-
 ```
-  
 ```
 
 ## Layouts & Pages
