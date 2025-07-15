@@ -72,6 +72,8 @@ Src/
 - **Center Layout (`(center-layout)/`)**  
   Layout for routes like login and tracking, includes only navbar and footer (no sidebar).
 
+- **Global Components(`(src/components/`)**
+   Contains reusable UI components like buttons, inputs, navigation bars, footers, sidebars, and FAQs, designed to be generic and shared across multiple pages and layouts.
 
 ## Layouts & Pages
 
