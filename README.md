@@ -54,7 +54,7 @@ Src/
      └── Navbar
      └── sidebar
 
-
+```
  ## Major Components Overview
 
 - **`src/app/`**  
@@ -82,7 +82,7 @@ Src/
   Main user interface post-login, rendered inside the sidebar layout with support for navigation and content management.
 
 ```
-
+```
 ## Layouts & Pages
 
 ### ✅ Adding New Pages Using Existing Layouts
