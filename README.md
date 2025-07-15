@@ -7,7 +7,7 @@ Welcome to the comprehensive documentation of PEP. This guide covers the purpose
 - [App Directory Structure](#app-directory-structure)
 - [Major Components Overview](#major-components-overview)
 - [Layouts & Pages](#layouts--pages)
-- [Global Styles & Colors](#layouts--pages)
+- [Colors](#colors)
 - [Shared UI Components](#shared-ui-components)
   - [Buttons](#buttons-primarybutton)
   - [Checkbox](#checkbox-checkbox)
@@ -158,10 +158,26 @@ export default function SettingsPage() {
 
 > **Note:** Sidebar, SidebarNavbar, and Footer will be applied automatically.
 
-## G
+## Colors
 
+This project uses custom colors defined in `src/styles/global.css` to keep styling consistent across all components. To add or modify colors, simply open the `global.css` file and update the CSS variables inside the `:root` selector. You can also create utility classes that use these variables to apply colors easily in your JSX/TSX components.
 
-## Global Styles & Colors
+For example, in `global.css`:
+
+```css
+:root {
+  --color-primary: #25459B;
+}
+```
+
+Then in your components, apply these classes like this:
+
+```tsx
+:root {
+<div className="text-primary">This text uses the primary color.</div>
+}
+```
+
 
 ### Buttons (PrimaryButton)
 
