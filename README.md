@@ -175,7 +175,7 @@ Then in your components, apply these classes like this:
 ```tsx
 <div className="text-primary">This text uses the primary color.</div>
 ```
-
+## Shared UI Components
 
 ### Buttons (PrimaryButton)
 
